@@ -9,4 +9,14 @@ public class BugRunner {
         world.add(new Rock());
         world.show();
     }
+
+    public static void moveBug(Bug bug, Integer count) {
+        for (int i = 1; i < count; i++) {
+            if (bug.canMove()) {
+                bug.move();
+            } else {
+                bug.turn();
+            }
+        }
+    }
 }
